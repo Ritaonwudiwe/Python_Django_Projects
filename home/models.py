@@ -47,7 +47,7 @@ class doctor(models.Model):
     experience = models.CharField(max_length=10000)
     gender = models.CharField(max_length=10000)
     email = models.EmailField()
-    patient = models.ForeignKey(people, on_delete=models.CASCADE)
+    patient = models.ManyToManyField(people)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
