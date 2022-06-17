@@ -1,0 +1,64 @@
+{% extends "hotel/index.html" %}
+{% load static %}
+
+    {% block body %}
+
+
+<section class="w3l-availability-form" id="booking">
+    <!-- /w3l-availability-form-section -->
+    <div class="w3l-availability-form-main py-5">
+        <div class="container pt-lg-3 pb-lg-5">
+            <div class="forms-top">
+                <div class="form-right">
+                    <div class="form-inner-cont">
+                        <h3 class="title-small">MAKE YOUR BOOKING</h3>
+                        <form method="post" class="signin-form" >
+                            {% csrf_token %}
+                            <div class="row book-form" >
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>occupant name</label>
+                                    <input type="text" style="color:black ;" name="occ_n" placeholder="name" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>occupant email</label>
+                                    <input type="email" style="color:black ;" name="occ_e" placeholder="Email" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>occupant occupation</label>
+                                    <input type="text" style="color:black ;" name="occ_o" placeholder="occupation" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>room number</label>
+                                    <input type="number" style="color:black ;"  name="room_num" placeholder="room_number" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>amount paid</label>
+                                    <input type="number"  style="color:black ;" name="amount" placeholder="amount_paid" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>number of night</label>
+                                    <input type="number"  style="color:black ;" name="no_of_night" placeholder="number of night" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>Check-in Date</label>
+                                    <input type="date"  style="color:black ;" name="start_date" placeholder="Check_in" required="">
+                                </div>
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <label>check-out Date </label>
+                                    <input type="date"  style="color:black ;"  name="end_date" placeholder="check_out" required />
+                                </div>
+                                <div class="bottom-btn col-md-4 col-sm-6 mt-3">
+                                    <label>Check availability </label>
+                                    <button class="btn btn-style btn-primary w-100 px-2">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //w3l-availability-form-section -->
+{%endblock body%}
+
