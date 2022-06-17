@@ -10,9 +10,9 @@ def signup(request):
         user_data = UserCreationForm(request.POST)
         if user_data.is_valid():
             user_data.save()
-            return redirect("hotel:homeView")
+            return redirect("blog:homeView")
         else:
-            return redirect("accounts:signupView")    
+            return redirect("accounts:loginView")    
     context = {
         "form":UserCreationForm(),
     }

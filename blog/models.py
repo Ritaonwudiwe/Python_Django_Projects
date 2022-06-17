@@ -8,7 +8,12 @@ class customer_detail(models.Model):
     occupant_occupation = models.CharField(max_length=10000)
     room_number = models.IntegerField()
     amount_paid = models.IntegerField()
-    number_of_rooms = models.IntegerField()
+    number_of_night = models.IntegerField()
     start_date = models.DateField()
     end_date = models.DateField()
+
+    def __str__(self):
+        return self.occupant_name
+
+
 
